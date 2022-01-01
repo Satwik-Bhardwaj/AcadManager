@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Login</title>
     <link href="css/login_des.css" rel="stylesheet"></link>
 </head>
+
 <body>
     <div class="mattress">
         <div class="log_card">
@@ -31,13 +33,13 @@
                     <input type="text" class="input-field" placeholder="Email Id" required>
                     <input type="password" class="input-field" placeholder="Password" required>
                     <div class="rem-pass-agree-state">
-                    <input type="checkbox" class="check-box"><label> I agree to the terms & conditions</label>
+                        <input type="checkbox" class="check-box"><label> I agree to the terms & conditions</label>
                     </div>
                     <button type="submit" class="submit-button">Register</button>
                 </div>
             </form>
 
-        </div>    
+        </div>
     </div>
     <script>
         var log_in = document.getElementById("log_in");
@@ -45,14 +47,15 @@
         var login_btn = document.getElementById("login_btn");
         var reg_btn = document.getElementById("reg_btn");
 
-        function register(){
+        function register() {
             log_in.style.left = "-450px";
             reg.style.left = "0px";
             reg_btn.style.backgroundColor = "#1695D0";
             login_btn.style.backgroundColor = "transparent";
 
         }
-        function login(){
+
+        function login() {
             log_in.style.left = "0px";
             reg.style.left = "450px";
             reg_btn.style.backgroundColor = "transparent";
@@ -60,4 +63,5 @@
         }
     </script>
 </body>
+
 </html>

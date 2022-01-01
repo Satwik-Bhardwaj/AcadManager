@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,11 +7,11 @@
     text-decoration: none;
 }
 
-body{
+body {
     background-color: #fff;
 }
 
-nav{
+nav {
     background-color: #000000d0;
     display: flex;
     justify-content: space-between;
@@ -23,29 +22,33 @@ nav{
     backdrop-filter: blur(20px);
     position: fixed;
 }
-#navi ol{
+
+#navi ol {
     list-style-type: none;
 }
-#navi ol li{
+
+#navi ol li {
     display: inline-block;
     padding: 17px 20px;
 }
-nav a{
+
+nav a {
     text-decoration: none;
     color: #ffffffc2;
 }
-nav a:hover{
+
+nav a:hover {
     color: #FFF;
 }
 
-.log_btn{
+.log_btn {
     padding: 5px 10px;
     background-color: #ffffff3b;
     border: none;
     border-radius: 50px;
 }
 
-.log_btn:hover{
+.log_btn:hover {
     background-color: #ffffff00;
     color: #ffffff;
     padding: 5px 10px;
@@ -53,11 +56,11 @@ nav a:hover{
     border-radius: 50px;
 }
 
-#first_sec{
+#first_sec {
     padding-top: 54.89px;
 }
 
-.board_4_symb{
+.board_4_symb {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -65,7 +68,7 @@ nav a:hover{
     padding: 50px;
 }
 
-#at_head{
+#at_head {
     font-size: 30pt;
     font-weight: bold;
     display: flex;
@@ -73,7 +76,8 @@ nav a:hover{
     justify-content: center;
     height: 100px;
 }
-#at_write{
+
+#at_write {
     background-color: #35283C;
     color: #fff;
     font-size: 25px;
@@ -81,11 +85,12 @@ nav a:hover{
     padding: 40px;
     text-align: justify;
 }
-#at_head span span:hover{
+
+#at_head span span:hover {
     color: #76ba1b;
 }
 
-#img_cont{
+#img_cont {
     display: flex;
     justify-content: space-between;
     height: auto;
@@ -93,30 +98,32 @@ nav a:hover{
     padding: 10px;
 }
 
-#img_cont img{
+#img_cont img {
     border-radius: 20px;
     width: calc(100%/3 - 10px);
     aspect-ratio: 16/9;
     overflow: hidden;
     object-fit: fill;
 }
-#img_cont img:hover{
+
+#img_cont img:hover {
     border: 2px solid rgb(30, 127, 255);
     cursor: pointer;
 }
 
-footer{
+footer {
     height: auto;
     padding: 50px;
     background-color: #e0e0e0;
     color: #525252;
 }
 
-.app_link_u_footer{
+.app_link_u_footer {
     color: inherit;
     display: inline-block;
     margin: 20px 20px 20px 0px;
 }
-.app_link_u_footer:hover{
+
+.app_link_u_footer:hover {
     text-decoration: underline;
 }
