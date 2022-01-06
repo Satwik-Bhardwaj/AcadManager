@@ -1,0 +1,75 @@
+@import url(../color/color.css);
+
+nav{
+    position: fixed;
+    background-color: var(--background-prime);
+    z-index: 10;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-left: 1.5px solid var(--object-prime);
+    align-items: center;
+    height: 100%;
+    padding: 20px 5px;
+}
+
+.settings{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.nav-hr{
+    background-color: var(--object-prime);
+    height: 1px;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px;
+}
+
+.botm-dock{
+    display: inline-block;
+    height: auto;
+    background-color: var(--background-prime);
+}
+
+nav ol{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ol li{
+    margin: 10px 10px;
+}
+
+nav ol li button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+/* nav ol li button:hover{
+    background-color: var(--hl-opq);
+} */
+
+
+nav button>svg{
+    fill: var(--object-prime);
+    height: 30px;
+    width: 30px;
+    transition: 1s;
+}
+nav button>svg:hover{
+    fill: var(--highlight);
+}
