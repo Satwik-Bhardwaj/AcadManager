@@ -1,25 +1,25 @@
 @import url(../color/color.css);
 
 nav{
-    position: fixed;
     background-color: var(--background-prime);
-    z-index: 10;
-    right: 0;
+    position: fixed;
+    z-index: 3;
+    right: 0px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     border-left: 1.5px solid var(--object-prime);
     align-items: center;
-    height: 100%;
+    height: 100vh;
     padding: 20px 5px;
 }
 
 .settings{
-    background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
     align-items: flex-start;
+    fill: transparent;
 }
 .nav-hr{
     background-color: var(--object-prime);
@@ -33,7 +33,6 @@ nav{
 .botm-dock{
     display: inline-block;
     height: auto;
-    background-color: var(--background-prime);
 }
 
 nav ol{
@@ -48,8 +47,8 @@ nav ol li{
     margin: 10px 10px;
 }
 
-nav ol li button{
-    background: transparent;
+nav button{
+    background: var(--background-prime);
     border: none;
     outline: none;
     cursor: pointer;
@@ -58,11 +57,6 @@ nav ol li button{
     height: 50px;
     width: 50px;
 }
-
-/* nav ol li button:hover{
-    background-color: var(--hl-opq);
-} */
-
 
 nav button>svg{
     fill: var(--object-prime);

@@ -1,15 +1,16 @@
 .pnl-sgm-2{
     position: fixed;
+    z-index: 2;
     display: grid;
     grid-template-rows: auto auto;
     overflow-x: hidden;
     overflow-y: scroll;
-    width: calc(35% - 82px);
+    width: 320px;
     height: 100%;
     background-color: var(--background-sec);
-    float: right;
-    right: 82px;
+    right: -402px;
     padding: 10px;
+    transition: right 1s;
 }
 
 .head-S700{

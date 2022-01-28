@@ -1,12 +1,9 @@
 @import url(../color/color.css);
 
 .pnl-sgm-1{
-    position: absolute;
-    width: calc(65%);
-    height: 100%;
+    width: calc(100% - 82px);
+    z-index: 1;
     padding: 20px;
-    left: 0;
-    background-color: var(--background-prime);
 }
 
 .profile-basics{
@@ -15,7 +12,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 20px;
+    margin: 0px;
 }
 
 .dp-cont{
@@ -34,17 +31,15 @@
 }
 
 .text-cont{
+    margin-left: 20px;
     display: grid;
     grid-row: auto auto;
-    padding: 30px;
     min-width: 400px;
 }
-
 .text-cont>h1{
     font-size: 50px;
     font-weight: 700;
 }
-
 .text-cont>h3{
     font-size: 20px;
     font-weight: 300;
@@ -56,5 +51,35 @@
     border: none;
     border-radius: 10px;
     width: 90%;
-    margin: 20px;
+    margin: 20px auto;
+}
+
+.lbl-opt{
+    display: grid;
+    padding: 10px;
+    cursor: default;
+    grid-template-columns: 50px auto;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.lbl-opt:hover{
+    background-color: var(--highlight);
+}
+
+.lbl-illus>svg{
+    fill: var(--object-prime);
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.one-opt>span{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.def-opt>span{
+    font-size: 20px;
+    font-weight: 400;
 }
