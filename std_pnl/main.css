@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, 'Sans-Serif';
+    /* outline: 1px dashed red; */
+}
+:root{
+    --prime-color: #1f0031;
+}
+body{
+    width: 100%;
+    background-color: #e4e4e4;
+}
+
+.Panel{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 70px;
+    width: calc(100% - 70px);
+    min-height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.SideBarActive~.Panel{
+    left: 240px;
+    width: calc(100% - 240px);
+}

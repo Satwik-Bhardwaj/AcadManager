@@ -1,0 +1,213 @@
+@media screen and (min-width: 961px) {
+    .SideBar{
+        user-select: none;
+        position: fixed;
+        background-color: var(--prime-color);
+        color: #fff;
+        width: 70px;
+        height: 100%;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .SideBarActive{
+        user-select: none;
+        position: fixed;
+        background-color: var(--prime-color);
+        color: #fff;
+        width: 240px;
+        height: 100%;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .SideBar a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .SideBarActive a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .MenuBar{
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .SideBar .ApplicationBanner{
+        height: 70px;
+        width: 70px;
+        transition: all 0.5s ease;
+        z-index: 3;
+    }
+    .SideBarActive .ApplicationBanner{
+        height: 70px;
+        width: 240px;
+        grid-template-columns: 160px 50px;
+        column-gap: 10px;
+        transition: all 0.5s ease;
+        z-index: 3;
+    }
+    .SideBar .ApplicationBanner div{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 0px 30px;
+        column-gap: 0px;
+        margin: 10px;
+        height: 50px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .SideBarActive .ApplicationBanner div{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 160px 30px;
+        column-gap: 10px;
+        margin: 10px;
+        height: 50px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .ApplicationBanner div i{
+        border-radius: 10px;
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        font-size: 30px;
+        z-index: 2;
+    }
+    .ApplicationBanner div i:hover{
+        background-color: #fff;
+        color: var(--prime-color);
+    }
+
+    .SideBar .ApplicationBanner div span{
+        opacity: 0;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .SideBarActive .ApplicationBanner div span{
+        opacity: 1;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .SideBar .MenuList{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 10px;
+        width: 50px;
+        list-style: none;
+        overflow-y: scroll;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .SideBarActive .MenuList{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 10px;
+        width: 220px;
+        list-style: none;
+        overflow-y: scroll;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .MenuList::-webkit-scrollbar{
+        display: none;
+    }
+
+    .SideBar .MenuList li a{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 30px 0px;
+        column-gap: 0px;
+        padding: 10px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .SideBarActive .MenuList li a{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 30px 160px;
+        column-gap: 10px;
+        padding: 10px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .MenuList li a:hover{
+        background-color: #ffffff;
+        color: var(--prime-color);
+    }
+
+    .MenuList li i{
+        font-size: 30px;
+    }
+    .SideBar .MenuList li span{
+        display: inline-block;
+        line-height: 30px;
+        height: 30px;
+        font-size: 15px;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    .SideBarActive .MenuList li span{
+        display: inline-block;
+        line-height: 30px;
+        height: 30px;
+        font-size: 15px;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .SettingOption{
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        width: 70px;
+        background-color: #4F1D43;
+        transition: all 0.5s ease;
+        z-index: 2;
+    }
+    .SideBarActive .SettingOption{
+        width: 240px;
+    }
+    .SettingOption a{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 30px 0px;
+        column-gap: 0px;
+        padding: 10px;
+        margin: 10px;
+        height: 50px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    .SideBarActive .SettingOption a{
+        grid-template-columns: 30px 160px;
+        column-gap: 10px;
+    }
+    .SettingOption a i{
+        font-size: 30px;
+    }
+    .SettingOption a span{
+        opacity: 0;
+        font-size: 15px;
+        transition: all 0.5s ease;
+    }
+    .SideBarActive .SettingOption a span{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,98 @@
+@media screen and (min-width: 960px) {
+    .CardSection{
+        width: 700px;
+        margin: 10px;
+    }
+    .CardSection>section{
+        min-height: 100px;
+        margin: 10px;
+        padding: 20px;
+        width: 680px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #2424245a;
+        overflow: hidden;
+        user-select: none;
+    }
+
+    .CardSection .Intro{
+        background-color: #fafafa;
+        height: 200px;
+        display: grid;
+        grid-template-columns: 160px 480px;
+    }
+    .ForProfileImage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ProfileImage{
+        height: 150px;
+        width: 150px;
+        object-fit: fill;
+        border: 2px solid #bbbbbb;
+        border-radius: 75px;
+    }
+    .ForName{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        padding: 10px;
+    }
+    .UserName{
+        font-weight: 700;
+    }
+    .RegistrationID{
+        font-weight: 100;
+    }
+    .SectionName{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .EducationSection{
+        background-color: var(--prime-color);
+        color: #fff;
+    }
+    .EducationSection>div{
+        margin: 10px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+    }
+    .EducationSection>div>div{
+        min-height: 30px;
+    }
+    .EducationSection>div>div>span{
+        font-size: 16.5px;
+    }
+    .EducationSection .ClassName span{
+        font-weight: 700;
+    }
+    .EducationSection .ClassScore span{
+        font-weight: 100;
+    }
+    .EducationSection .PassingYear span{
+        font-weight: 100;
+    }
+
+    .AboutSection{
+        background-color: #fff;
+        color: #000000;
+    }
+    .AboutSection>div{
+        margin: 10px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+    }
+    .AboutSection>div>div{
+        min-height: 30px;
+    }
+    .AboutSection>div>div>span{
+        font-size: 16.5px;
+    }
+    .AboutSection .Title span{
+        font-weight: 700;
+    }
+    .AboutSection .Disp span{
+        font-weight: 100;
+    }
+}
