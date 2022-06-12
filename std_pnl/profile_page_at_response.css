@@ -11,11 +11,12 @@
         box-shadow: 5px 5px 10px #2424245a;
         overflow: hidden;
         user-select: none;
+        background-color: var(--for-cards);
+        color: var(--seco-txt-inclr);
         margin: 10px 0px;
     }
 
     .CardSection .Intro{
-        background-color: #fafafa;
         height: 200px;
         width: 100%;
         display: grid;
@@ -53,9 +54,9 @@
         font-size: 20px;
         font-weight: 700;
     }
-    .EducationSection{
-        background-color: var(--prime-color);
-        color: #fff;
+    section.EducationSection{
+        background-color: var(--prim-color);
+        color: var(--seco-txt-inclr);
     }
     .EducationSection>div{
         margin: 10px;

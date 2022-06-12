@@ -5,12 +5,8 @@
         box-sizing: border-box;
         font-family: Poppins, 'Sans-Serif';
     }
-    :root{
-        --prime-color: #1f0031;
-    }
     body{
         width: 100%;
-        background-color: #e4e4e4;
     }
     .Panel{
         position: absolute;

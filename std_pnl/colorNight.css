@@ -1,0 +1,15 @@
+:root{
+    --prim-color: #f0a500;
+    --prim-bgc: #000000;
+    --seco-color: #ffffff;
+    --seco-bgc: #090807;
+    --prim-txt-inclr: #000000;
+    --seco-txt-inclr: #ffffff;
+    --prim-txt-inbgc: #e6d5b8;
+    --seco-txt-inbgc: #f0a500;
+    --seco-txt-sec-inclr: #090807;
+    --shadow-atlight: #09080757;
+    --shadow-atdark: #e6d5b823;
+    --border-atdark: #e6d5b8;
+    --for-cards: #0f0f0f;
+}

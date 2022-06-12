@@ -10,13 +10,14 @@
         width: 680px;
         border: none;
         border-radius: 10px;
-        box-shadow: 5px 5px 10px #2424245a;
+        box-shadow: 5px 5px 5px var(--shadow-atdark);
         overflow: hidden;
         user-select: none;
+        background-color: var(--for-cards);
+        color: var(--seco-txt-inclr);
     }
 
     .CardSection .Intro{
-        background-color: #fafafa;
         height: 200px;
         display: grid;
         grid-template-columns: 160px 480px;
@@ -30,7 +31,7 @@
         height: 150px;
         width: 150px;
         object-fit: fill;
-        border: 2px solid #bbbbbb;
+        border: 2px solid var(--border-atdark);
         border-radius: 75px;
     }
     .ForName{
@@ -49,9 +50,9 @@
         font-size: 20px;
         font-weight: 700;
     }
-    .EducationSection{
-        background-color: var(--prime-color);
-        color: #fff;
+    section.EducationSection{
+        background-color: var(--prim-color);
+        color: var(--seco-txt-inclr);
     }
     .EducationSection>div{
         margin: 10px;
