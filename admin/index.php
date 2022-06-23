@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<!-- php page auto refresh just for test -->
+<?php
+            $page = $_SERVER['PHP_SELF'];
+            $sec = "1";
+        ?>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- meta tag for auto refresh, just for testing -->
+        <!-- <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'"> -->
         <title>Admin</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +20,8 @@
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!-- php code here -->
+        
+        <!-- php code here for inserting student -->
         <?php
             if(isset($_POST['InsertStudent'])){
                 // servername => localhost
@@ -28,7 +36,7 @@
                         . mysqli_connect_error());
                 }
 
-                // Taking all 5 values from the form data(input)
+                // Taking all values from the form data(input)
                 $first_name = $_REQUEST['first_name'];
                 $last_name = $_REQUEST['last_name'];
                 $regno = $_REQUEST['regno'];
@@ -43,10 +51,14 @@
                 $section = $_REQUEST['section'];
                 $address = $_REQUEST['address'];
                 $nationality = $_REQUEST['nationality'];
+                $studyyear = $_REQUEST['studyYear'];
+                $semester = $_REQUEST['semester'];
+                $phnumber = $_REQUEST['phone_no'];
 
                 // Performing insert query execution
                 // here our table name is college
-                $sql = "INSERT INTO college VALUES ('$first_name', 
+                $sqltable = "INSERT INTO college VALUES (
+                                                    '$first_name', 
                                                     '$last_name',
                                                     '$father_name',
                                                     '$mother_name',
@@ -59,31 +71,54 @@
                                                     '$section',
                                                     '$address',
                                                     '$nationality',
-                                                    '$regno');";
+                                                    '$regno',
+                                                    '$studyyear',
+                                                    '$semester',
+                                                    '$phnumber');";
                 
-                mysqli_query($conn, $sql);
+                mysqli_query($conn, $sqltable);
 
                 // Close connection
                 mysqli_close($conn);
             }
 	    ?>
+
+        <!-- php code for displaying students' data -->
+        <?php
+            $username = 'root';
+            $password = '';
+            $databaseName = 'studentmanagement';
+            $serverName = 'localhost';
+
+            $mysqli = mysqli_connect($serverName, $username, $password, $databaseName, 3306);
+            if($mysqli->connect_error){
+                die('Connect error (' . $mysqli->connect_errno . ') '. $mysqli->connect_error);
+            }
+            $sql = "SELECT * FROM college order by registerno;";
+            $result = $mysqli->query($sql);
+            $mysqli->close();
+        ?>
+
         <div class="board">
             <table class="list">
+                <?php
+                    while($rows=$result->fetch_assoc()){
+                ?>
                 <tr>
                     <td>
                         <div class="data-show-block">
                             <div class="data-card">
                                 <div class="basic-data">
-                                    <span id="stName">Student Name</span>
-                                    <span id="stReg">PIET26CS171</span>
+                                    <span id="stName"><?php echo $rows['first_name'] . ' ' . $rows['last_name'];?></span>
+                                    <span id="stReg"><?php echo $rows['registerno'];?></span>
                                 </div>
                                 <div class="persuing-data">
-                                    <span id="stYear">Student Year</span>
-                                    <span id="stSem">Student Sem</span>
+                                    <span id="stYear"><?php echo $rows['study_year'] . ' ' . 'Year';?></span>
+                                    <span id="stSem"><?php echo $rows['semester']. ' ' . 'Sem';?></span>
                                 </div>
                                 <div class="additional-data">
-                                    <span id="stFatherName">Father Name</span>
-                                    <span id="stPhone">+91 1112223334</span>
+                                    <span id="stFatherName"><?php echo $rows['father_name'];?></span>
+                                    <span id="stPhone"><?php echo $rows['phoneNumber'];?></span>
                                 </div>
                             </div>
                             <div onclick="addAttend(regno)" class="attend">
@@ -95,6 +130,9 @@
                         </div>
                     </td>
                 </tr>
+                <?php
+                    }
+                ?>
                 <tr>
                     <td>
                         <div class="data-feed-block" id="dataFeedBlock">
@@ -123,6 +161,11 @@
                                     <div class="input-field">
                                         <span class="details">Mother's Name</span>
                                         <input placeholder="Full Mother's Name" type="text"  name="mother_name" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <span class="details">Phone Number</span>
+                                        <input placeholder="+91 1111222333" type="number"  name="phone_no" required>
                                     </div>
         
                                     <div class="gender-field">
@@ -168,7 +211,16 @@
                                         <input placeholder="Example: 45% / 7.9CGPA" type="text" name="ugdeg" required>
                                     </div>
         
-        
+                                    <div class="input-field">
+                                        <span class="details">Year</span>
+                                        <input placeholder="Year" type="number" name="studyYear" min="1" max="4" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <span class="details">Semester</span>
+                                        <input placeholder="Semester" type="number" name="semester" min="1" max="8" required>
+                                    </div>
+
                                     <div class="selection-field">
                                         <span class="details">Section</span>
                                         <select name="section" required>

@@ -12,3 +12,4 @@ function insertDetails(){
         insertDetBtn = true;
     }
 }
+

@@ -10,6 +10,38 @@
 </head>
 
 <body>
+    <?php
+            if(isset($_POST['RegisterStudent'])){
+                // servername => localhost
+                // username => root
+                // password => empty
+                // database name => staff
+                $conn = mysqli_connect("localhost", "root", "", "studentmanagement");
+
+                // Check connection
+                if($conn === false){
+                    die("ERROR: Could not connect. "
+                        . mysqli_connect_error());
+                }
+
+                // Taking all values from the form data(input)
+                $user_id = $_REQUEST['user_id'];
+                $email_id = $_REQUEST['email_id'];
+                $password = $_REQUEST['password'];
+
+                // Performing insert query execution
+                // here our table name is college
+                $sqltable = "INSERT INTO registration VALUES (
+                                                    '$user_id', 
+                                                    '$email_id',
+                                                    '$password');";
+                
+                mysqli_query($conn, $sqltable);
+
+                // Close connection
+                mysqli_close($conn);
+            }
+	    ?>
     <div class="mattress">
         <div class="log_card">
             <div class="top_bar">
@@ -27,15 +59,15 @@
                     <button type="submit" class="submit-button">Log In</button>
                 </div>
             </form>
-            <form id="register" class="input-group">
+            <form id="register" class="input-group" method="post" action="">
                 <div class="input-group-sub">
-                    <input type="text" class="input-field" placeholder="User Id" required>
-                    <input type="text" class="input-field" placeholder="Email Id" required>
-                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="text" class="input-field" placeholder="User Id" name="user_id" required>
+                    <input type="text" class="input-field" placeholder="Email Id" name="email_id" required>
+                    <input type="password" class="input-field" placeholder="Password" name="password" required>
                     <div class="rem-pass-agree-state">
                         <input type="checkbox" class="check-box"><label> I agree to the terms & conditions</label>
                     </div>
-                    <button type="submit" class="submit-button">Register</button>
+                    <button type="submit" class="submit-button" name="RegisterStudent">Register</button>
                 </div>
             </form>
 
